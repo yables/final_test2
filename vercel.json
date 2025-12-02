@@ -2,15 +2,15 @@
 "version": 2,
 "builds": [
 {
+"src": "server.cjs",
+"use": "@vercel/node"
+},
+{
 "src": "package.json",
 "use": "@vercel/static-build",
 "config": {
 "distDir": "dist"
 }
-},
-{
-"src": "server.cjs",
-"use": "@vercel/node"
 }
 ],
 "routes": [
@@ -20,7 +20,7 @@
 },
 {
 "src": "/(.)",
-"dest": "/dist/index.html"
+"dest": "/index.html"
 }
 ]
 }
